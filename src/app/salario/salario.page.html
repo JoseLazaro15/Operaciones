@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>salario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">salario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h1>Calculadora de Salarios</h1>
+  <ion-item>
+    <ion-select label="Selecciona la categoria" label-placement="floating" [(ngModel)]="Categoria">
+      <ion-select-option value="Ayudante">Ayudante</ion-select-option>
+      <ion-select-option value="Administrativo">Administrativo</ion-select-option>
+      <ion-select-option value="Directivo">Directivo</ion-select-option>
+      <ion-select-option value="Gerente">Gerente</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Ingresa las horas trabajadas" type="number" [(ngModel)]="Horas" placeholder="" id="Horas"></ion-input>
+  </ion-item>
+  <ion-button shape="round" (click)="calcularSalario()">Calcular el Salario</ion-button>
+  <br>
+  <br>
+  <ion-label style="font-size: 2em;">El salario antes de impuestos es de = </ion-label>
+  <ion-label  style="font-size: 2em;">${{Subtotal}}</ion-label>
+  <br>
+  <br>
+  <ion-label style="font-size: 2em;">El salario sin impuestos es de = </ion-label>
+  <ion-label  style="font-size: 2em;">${{Total}}</ion-label>
+</ion-content>

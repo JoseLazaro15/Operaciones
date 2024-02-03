@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>conversion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">conversion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h1>Calculadora de Conversiones</h1>
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Moneda" placeholder="Selecciona una moneda" [(ngModel)]="Moneda">
+        <ion-select-option value="Dolares">Dolares</ion-select-option>
+        <ion-select-option value="Euros">Euros</ion-select-option>
+        <ion-select-option value="Yen">Yen</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-input label="Ingresa el monto" type="number" [(ngModel)]="Monto" placeholder="" id="Monto"></ion-input>
+  </ion-item>
+  <ion-button shape="round" (click)="calcularConversion()">Convertir</ion-button>
+  <br>
+  <br>
+  <ion-item>
+    <ion-label position="stacked">Conversion a Pesos Mexicanos: </ion-label>
+    <ion-input disabled>$ {{ Resultado }} MXN</ion-input>
+  </ion-item>
+</ion-content>

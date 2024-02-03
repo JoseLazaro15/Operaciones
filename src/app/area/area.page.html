@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>area</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">area</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h1>Calculadora de Area</h1>
+  <ion-item>
+    <ion-select label="Que area desea calcular?" label-placement="floating" [(ngModel)]="Figura">
+      <ion-select-option value="Triangulo">Triangulo</ion-select-option>
+      <ion-select-option value="Rectangulo">Rectangulo</ion-select-option>
+      <ion-select-option value="Cuadrado">Cuadrado</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Base (b)" type="number" [(ngModel)]="Base" placeholder="" id="Base"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Altura (h)" type="number" [(ngModel)]="Altura" placeholder="" id="Altura"></ion-input>
+  </ion-item>
+  <ion-button shape="round" (click)="calcularArea()">Calcular Area</ion-button>
+  <br>
+  <br>
+  <ion-label style="font-size: 2em;">El area es de = </ion-label>
+  <ion-label  style="font-size: 2em;">{{Resultado}}</ion-label>
+</ion-content>
